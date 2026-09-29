@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artur Nastasovici | Portfolio</title>
+ 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+ 
+body{
+background:#f4f6f9;
+color:#333;
+line-height:1.6;
+}
+ 
+header{
+background:linear-gradient(135deg,#003366,#0056b3);
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+ 
+header h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+ 
+header p{
+font-size:1.2rem;
+}
+ 
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:40px 0;
+}
+ 
+.section{
+margin-bottom:60px;
+}
+ 
+.section h2{
+color:#003366;
+margin-bottom:20px;
+border-bottom:3px solid #0056b3;
+display:inline-block;
+padding-bottom:5px;
+}
+ 
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+ 
+.skill-card{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+ 
+.project{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+ 
+.contact a{
+color:#0056b3;
+text-decoration:none;
+}
+ 
+footer{
+text-align:center;
+padding:20px;
+background:#003366;
+color:white;
+}
+</style>
+</head>
+ 
+<body>
+ 
+<header>
+<h1>Artur Nastasovici</h1>
+<p>Chemical Engineering & Biotechnology Student | Researcher</p>
+</header>
+ 
+<div class="container">
+ 
+<section class="section">
+<h2>About Me</h2>
+<p>
+Chemical Engineering and Biotechnology student at Aalborg University
+with hands-on laboratory and research experience. Interested in
+process engineering, petroleum refining, biotechnology,
+sustainability, reaction kinetics, and analytical chemistry.
+</p>
+</section>
+ 
+<section class="section">
+<h2>Education</h2>
+ 
+<div class="project">
+<h3>BSc Chemical Engineering & Biotechnology</h3>
+<p>Aalborg University, Denmark (2024-2027)</p>
+</div>
+ 
+<div class="project">
+<h3>AP Degree in Chemical and Biotechnical Science</h3>
+<p>Business Academy Aarhus, Denmark (2021-2024)</p>
+</div>
+</section>
+ 
+<section class="section">
+<h2>Technical Skills</h2>
+ 
+<div class="skills">
+<div class="skill-card">Python</div>
+<div class="skill-card">R Programming</div>
+<div class="skill-card">Aspen HYSYS</div>
+<div class="skill-card">GC & HPLC</div>
+<div class="skill-card">Raman Spectroscopy</div>
+<div class="skill-card">UV-VIS Spectroscopy</div>
+<div class="skill-card">IR Spectroscopy</div>
+<div class="skill-card">Microbiology</div>
+<div class="skill-card">PCR</div>
+<div class="skill-card">CRISPR-Cas</div>
+<div class="skill-card">CellProfiler</div>
+<div class="skill-card">Reaction Kinetics</div>
+</div>
+</section>
+ 
+<section class="section">
+<h2>Research Experience</h2>
+ 
+<div class="project">
+<h3>Laboratory Assistant / Technician</h3>
+<p><strong>University of Melbourne (Bio21 Institute)</strong></p>
+<ul>
+<li>Multidisciplinary research collaboration</li>
+<li>Quality assurance and laboratory safety</li>
+<li>Experimental planning and execution</li>
+<li>Independent research activities</li>
+</ul>
+</div>
+</section>
+ 
+<section class="section">
+<h2>Featured Projects</h2>
+ 
+<div class="project">
+<h3>Side Effects of Formaldehyde Releasers in Petroleum Refineries</h3>
+<p>
+Research involving ICP-OES, Raman spectroscopy,
+formaldehyde quantification, ammonium measurements,
+and reaction kinetics.
+</p>
+</div>
+ 
+<div class="project">
+<h3>Gravity-Based Pumping of Fungal Suspensions</h3>
+<p>
+CellProfiler image analysis, statistical modelling,
+ANOVA analysis, and process optimization.
+</p>
+</div>
+ 
+<div class="project">
+<h3>Sulfur-Dependent Bacteria Research</h3>
+<p>
+DNA extraction, bacterial growth analysis,
+enzyme optimization, and analytical methods.
+</p>
+</div>
+</section>
+ 
+<section class="section">
+<h2>Publication</h2>
+ 
+<div class="project">
+<a href="https://doi.org/10.1039/D4SC05114A" target="_blank">
+View Publication
+</a>
+</div>
+</section>
+ 
+<section class="section">
+<h2>Languages</h2>
+ 
+<ul>
+<li>English - Fluent</li>
+<li>Romanian - Proficient</li>
+<li>Russian - Native</li>
+<li>Danish - Beginner</li>
+</ul>
+</section>
+ 
+<section class="section contact">
+<h2>Contact</h2>
+ 
+<p>Email: anasta24@student.aau.dk</p>
+<p>GitHub: https://github.com/LilArtNastgithub.com/LilArtNast</a></p>
+<p>LinkedIn: <a href="https://linkedin.com/in/artur-nastasovici-60a724251">LinkedIn Profile</a></p>
+</section>
+ 
+</div>
+ 
+<footer>
+© 2026 Artur Nastasovici
+</footer>
+ 
+</body>
+</html>
