@@ -3,222 +3,465 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Artur Nastasovici | Portfolio</title>
- 
+
+<title>Artur Nastasovici | Chemical Engineer & Researcher</title>
+
+https://fonts.googleapis.com
+https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap
+
 <style>
+
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --accent:#38bdf8;
+    --text:#f8fafc;
+    --secondary:#94a3b8;
+}
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
 }
- 
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-background:#f4f6f9;
-color:#333;
-line-height:1.6;
+    background:var(--bg);
+    color:var(--text);
 }
- 
-header{
-background:linear-gradient(135deg,#003366,#0056b3);
-color:white;
-text-align:center;
-padding:80px 20px;
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
 }
- 
-header h1{
-font-size:3rem;
-margin-bottom:10px;
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
- 
-header p{
-font-size:1.2rem;
+
+.logo{
+    font-weight:800;
+    color:var(--accent);
 }
- 
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px;
+    background:
+    radial-gradient(circle at top right,#2563eb40,transparent),
+    radial-gradient(circle at bottom left,#06b6d440,transparent);
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:var(--secondary);
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    margin:5px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.primary{
+    background:var(--accent);
+    color:black;
+}
+
+.secondary-btn{
+    border:1px solid var(--accent);
+    color:var(--accent);
+}
+
 .container{
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:40px 0;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
 }
- 
-.section{
-margin-bottom:60px;
+
+.section-title{
+    font-size:2.2rem;
+    margin-bottom:40px;
+    color:var(--accent);
 }
- 
-.section h2{
-color:#003366;
-margin-bottom:20px;
-border-bottom:3px solid #0056b3;
-display:inline-block;
-padding-bottom:5px;
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
 }
- 
+
+.stat-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.stat-card h3{
+    font-size:2rem;
+    color:var(--accent);
+}
+
 .skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
 }
- 
-.skill-card{
-background:white;
-padding:15px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+
+.skill{
+    background:var(--card);
+    padding:20px;
+    border-radius:10px;
 }
- 
-.project{
-background:white;
-padding:20px;
-margin-bottom:20px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+
+.bar{
+    height:10px;
+    background:#334155;
+    border-radius:20px;
+    margin-top:10px;
 }
- 
+
+.fill{
+    height:10px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#06b6d4,#3b82f6);
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--card);
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.timeline{
+    border-left:3px solid var(--accent);
+    padding-left:30px;
+}
+
+.timeline-item{
+    margin-bottom:30px;
+}
+
+.contact{
+    text-align:center;
+}
+
 .contact a{
-color:#0056b3;
-text-decoration:none;
+    color:var(--accent);
+    text-decoration:none;
 }
- 
+
 footer{
-text-align:center;
-padding:20px;
-background:#003366;
-color:white;
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #334155;
+    color:var(--secondary);
 }
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+
 </style>
 </head>
- 
+
 <body>
- 
-<header>
+
+<nav>
+<div class="nav-container">
+<div class="logo">AN</div>
+
+<div class="nav-links">
+#aboutAbout</a>
+#skillsSkills</a>
+#projectsProjects</a>
+#educationEducation</a>
+#contactContact</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+
+<div>
+
 <h1>Artur Nastasovici</h1>
-<p>Chemical Engineering & Biotechnology Student | Researcher</p>
-</header>
- 
-<div class="container">
- 
-<section class="section">
-<h2>About Me</h2>
+
 <p>
-Chemical Engineering and Biotechnology student at Aalborg University
-with hands-on laboratory and research experience. Interested in
-process engineering, petroleum refining, biotechnology,
-sustainability, reaction kinetics, and analytical chemistry.
+Chemical Engineering & Biotechnology Student,
+Researcher, and Future Process Engineer focused on
+Petroleum Refining, Biotechnology, Sustainability,
+and Industrial Process Optimization.
 </p>
-</section>
- 
-<section class="section">
-<h2>Education</h2>
- 
-<div class="project">
-<h3>BSc Chemical Engineering & Biotechnology</h3>
-<p>Aalborg University, Denmark (2024-2027)</p>
-</div>
- 
-<div class="project">
-<h3>AP Degree in Chemical and Biotechnical Science</h3>
-<p>Business Academy Aarhus, Denmark (2021-2024)</p>
-</div>
-</section>
- 
-<section class="section">
-<h2>Technical Skills</h2>
- 
-<div class="skills">
-<div class="skill-card">Python</div>
-<div class="skill-card">R Programming</div>
-<div class="skill-card">Aspen HYSYS</div>
-<div class="skill-card">GC & HPLC</div>
-<div class="skill-card">Raman Spectroscopy</div>
-<div class="skill-card">UV-VIS Spectroscopy</div>
-<div class="skill-card">IR Spectroscopy</div>
-<div class="skill-card">Microbiology</div>
-<div class="skill-card">PCR</div>
-<div class="skill-card">CRISPR-Cas</div>
-<div class="skill-card">CellProfiler</div>
-<div class="skill-card">Reaction Kinetics</div>
-</div>
-</section>
- 
-<section class="section">
-<h2>Research Experience</h2>
- 
-<div class="project">
-<h3>Laboratory Assistant / Technician</h3>
-<p><strong>University of Melbourne (Bio21 Institute)</strong></p>
-<ul>
-<li>Multidisciplinary research collaboration</li>
-<li>Quality assurance and laboratory safety</li>
-<li>Experimental planning and execution</li>
-<li>Independent research activities</li>
-</ul>
-</div>
-</section>
- 
-<section class="section">
-<h2>Featured Projects</h2>
- 
-<div class="project">
-<h3>Side Effects of Formaldehyde Releasers in Petroleum Refineries</h3>
-<p>
-Research involving ICP-OES, Raman spectroscopy,
-formaldehyde quantification, ammonium measurements,
-and reaction kinetics.
-</p>
-</div>
- 
-<div class="project">
-<h3>Gravity-Based Pumping of Fungal Suspensions</h3>
-<p>
-CellProfiler image analysis, statistical modelling,
-ANOVA analysis, and process optimization.
-</p>
-</div>
- 
-<div class="project">
-<h3>Sulfur-Dependent Bacteria Research</h3>
-<p>
-DNA extraction, bacterial growth analysis,
-enzyme optimization, and analytical methods.
-</p>
-</div>
-</section>
- 
-<section class="section">
-<h2>Publication</h2>
- 
-<div class="project">
-<a href="https://doi.org/10.1039/D4SC05114A" target="_blank">
-View Publication
+
+<div class="buttons">
+
+https://github.com/LilArtNast
+GitHub
 </a>
+
+<a class="btn secondary-btn"
+href="https://linkedin.com/in/artur-nastasovici-60a724251"
+target="_blank">
+LinkedIn
+</a>
+
 </div>
+
+</div>
+
 </section>
- 
-<section class="section">
-<h2>Languages</h2>
- 
-<ul>
-<li>English - Fluent</li>
-<li>Romanian - Proficient</li>
-<li>Russian - Native</li>
-<li>Danish - Beginner</li>
-</ul>
+
+<section class="container">
+
+<h2 class="section-title">Highlights</h2>
+
+<div class="stats">
+
+<div class="stat-card">
+<h3>3+</h3>
+<p>Research Projects</p>
+</div>
+
+<div class="stat-card">
+<h3>1</h3>
+<p>Scientific Publication</p>
+</div>
+
+<div class="stat-card">
+<h3>10+</h3>
+<p>Laboratory Techniques</p>
+</div>
+
+<div class="stat-card">
+<h3>4</h3>
+<p>Languages</p>
+</div>
+
+</div>
+
 </section>
- 
-<section class="section contact">
-<h2>Contact</h2>
- 
+
+<section id="about" class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<p style="max-width:900px;color:#cbd5e1;font-size:1.1rem;line-height:1.8;">
+I am currently studying Chemical Engineering and Biotechnology at
+Aalborg University. My experience spans laboratory research,
+analytical chemistry, microbiology, biotechnology, reaction kinetics,
+and process engineering. I am passionate about developing sustainable
+technologies and solving industrial challenges through science and engineering.
+</p>
+
+</section>
+
+<section id="skills" class="container">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+Python
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+R Programming
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+</div>
+
+<div class="skill">
+Spectroscopy
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+Chromatography (GC/HPLC)
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+Microbiology
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+Aspen HYSYS
+<div class="bar"><div class="fill" style="width:60%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="container">
+
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>🛢️ Petroleum Refinery Research</h3>
+<p>
+Investigation of formaldehyde releasers, ammonium chemistry,
+fouling mechanisms, Raman measurements and reaction kinetics.
+</p>
+</div>
+
+<div class="card">
+<h3>🦠 Sulfur-Dependent Bacteria</h3>
+<p>
+DNA extraction, growth curves, enzyme optimization,
+Fuchsin assay implementation and sulfur metabolism studies.
+</p>
+</div>
+
+<div class="card">
+<h3>⚙️ Fungal Suspension Pumping</h3>
+<p>
+Gravity-based pumping study using CellProfiler,
+statistical analysis and process optimization.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="education" class="container">
+
+<h2 class="section-title">Education & Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Aalborg University</h3>
+<p>BSc Chemical Engineering & Biotechnology (2024-2027)</p>
+</div>
+
+<div class="timeline-item">
+<h3>University of Melbourne</h3>
+<p>Laboratory Assistant / Technician (2023-2024)</p>
+</div>
+
+<div class="timeline-item">
+<h3>Business Academy Aarhus</h3>
+<p>AP Degree in Chemical & Biotechnical Science (2021-2024)</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Publication</h2>
+
+<div class="card">
+
+<h3>📄 Scientific Publication</h3>
+
+<p style="margin-top:10px;">
+Published research in the field of chemical sciences.
+</p>
+
+<p style="margin-top:15px;">
+<a style="color:#38bdf8;"
+href="https://doi.org/10.1039/D4SC05114A"
+target="_blank">
+View Publication →
+</a>
+</p>
+
+</div>
+
+</section>
+
+<section id="contact" class="container contact">
+
+<h2 class="section-title">Contact</h2>
+
 <p>Email: anasta24@student.aau.dk</p>
-<p>GitHub: https://github.com/LilArtNastgithub.com/LilArtNast</a></p>
-<p>LinkedIn: <a href="https://linkedin.com/in/artur-nastasovici-60a724251">LinkedIn Profile</a></p>
+
+<p>
+GitHub:
+https://github.com/LilArtNast
+github.com/LilArtNast
+</a>
+</p>
+
+<p>
+LinkedIn:
+<a href="https://linkedin.com/in/artur-nastasovici-60a724251">
+linkedin.com/in/artur-nastasovici-60a724251
+</a>
+</p>
+
 </section>
- 
-</div>
- 
+
 <footer>
-© 2026 Artur Nastasovici
+© 2026 Artur Nastasovici | Chemical Engineering & Biotechnology
 </footer>
- 
+
 </body>
 </html>
