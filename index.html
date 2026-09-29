@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Artur Nastasovici | Portfolio</title>
+<title>Artur Nastasovici | Chemical Engineer Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 
 <style>
 
@@ -33,6 +32,7 @@ line-height:1.6;
 nav{
 position:fixed;
 top:0;
+left:0;
 width:100%;
 background:rgba(15,23,42,.95);
 backdrop-filter:blur(10px);
@@ -43,49 +43,66 @@ border-bottom:1px solid #334155;
 .nav-container{
 max-width:1200px;
 margin:auto;
-padding:20px;
+padding:18px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
 
 .logo{
-font-size:1.4rem;
+font-size:1.5rem;
 font-weight:800;
 color:#38bdf8;
 }
 
-nav a{
-color:white;
+.nav-links a{
 text-decoration:none;
+color:white;
 margin-left:20px;
-font-size:14px;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#38bdf8;
 }
 
 .hero{
 min-height:100vh;
 display:flex;
-justify-content:center;
 align-items:center;
-text-align:center;
+justify-content:center;
 padding:120px 20px;
+text-align:center;
+
 background:
-radial-gradient(circle at top right,#2563eb55,transparent),
+radial-gradient(circle at top right,#3b82f655,transparent),
 radial-gradient(circle at bottom left,#06b6d455,transparent);
 }
 
-.hero-content{
-max-width:900px;
+.profile-image{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #38bdf8;
+margin-bottom:25px;
 }
 
 .hero h1{
 font-size:4rem;
-margin-bottom:15px;
+margin-bottom:10px;
+}
+
+.hero h2{
+color:#38bdf8;
+font-weight:500;
+margin-bottom:20px;
 }
 
 .hero p{
+max-width:800px;
+margin:auto;
 color:#cbd5e1;
-font-size:1.2rem;
 }
 
 .buttons{
@@ -97,18 +114,28 @@ display:inline-block;
 padding:14px 28px;
 border-radius:10px;
 text-decoration:none;
-margin:5px;
 font-weight:600;
+margin:5px;
+transition:.3s;
 }
 
-.primary{
+.btn-primary{
 background:#38bdf8;
 color:black;
 }
 
-.secondary{
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-secondary{
 border:1px solid #38bdf8;
 color:#38bdf8;
+}
+
+.btn-secondary:hover{
+background:#38bdf8;
+color:black;
 }
 
 .container{
@@ -118,50 +145,23 @@ padding:90px 20px;
 }
 
 .section-title{
-font-size:2.3rem;
+font-size:2.5rem;
 margin-bottom:40px;
 color:#38bdf8;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+text-align:center;
 }
 
 .card{
 background:#1e293b;
-padding:25px;
-border-radius:18px;
 border:1px solid #334155;
-transition:.3s;
+border-radius:18px;
+padding:25px;
 }
 
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-margin-bottom:15px;
-color:#38bdf8;
-}
-
-.stats{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.stat{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-text-align:center;
-}
-
-.stat h2{
-font-size:2rem;
-color:#38bdf8;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .timeline{
@@ -170,12 +170,12 @@ padding-left:25px;
 }
 
 .timeline-item{
-margin-bottom:40px;
+margin-bottom:35px;
 }
 
 .timeline-item h3{
 color:#38bdf8;
-margin-bottom:5px;
+margin-bottom:8px;
 }
 
 .skills{
@@ -187,23 +187,39 @@ gap:15px;
 .skill{
 background:#1e293b;
 padding:15px;
-border-radius:10px;
 text-align:center;
+border-radius:10px;
 border:1px solid #334155;
 }
 
-.contact{
-text-align:center;
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
+.stat{
+background:#1e293b;
+padding:30px;
+text-align:center;
+border-radius:15px;
+}
+
+.stat h2{
+color:#38bdf8;
+font-size:2rem;
+}
+
+.references a,
+.publication a,
 .contact a{
 color:#38bdf8;
 text-decoration:none;
 }
 
 footer{
-padding:30px;
 text-align:center;
+padding:30px;
 border-top:1px solid #334155;
 color:#94a3b8;
 }
@@ -211,10 +227,10 @@ color:#94a3b8;
 @media(max-width:768px){
 
 .hero h1{
-font-size:2.5rem;
+font-size:2.6rem;
 }
 
-nav{
+.nav-links{
 display:none;
 }
 
@@ -227,49 +243,35 @@ display:none;
 
 <nav>
 <div class="nav-container">
+
 <div class="logo">AN</div>
 
-<div>
-#aboutAbout</a>
-#experienceExperience</a>
-#projectsProjects</a>
+<div class="nav-links">
+<a href="#about">AboutienceExperience</a>
+<a hreftsProjects</a>
 #skillsSkills</a>
-#sportsSports</a>
-#contactContact</a>
+<aobbiesInterests</a>
+<aontactContact</a>
 </div>
+
 </div>
 </nav>
 
 <section class="hero">
 
-<div class="hero-content">
-images/photo.jpeg margin-bottom:30px;
-">
-<h1>Artur Nastasovici</h1>
+<div>
+
+<img src="images/profile.jpg" alt="Artur Nastasovici" classl Engineering & Biotechnology Student</h2>
 
 <p>
-Chemical Engineering & Biotechnology Student • Researcher • Future Process Engineer
-</p>
-
-<p style="margin-top:20px;">
-Passionate about petroleum refining, sustainable technologies,
-reaction kinetics, biotechnology, process optimization,
-and industrial problem solving.
+Passionate about petroleum refining, reaction kinetics,
+biotechnology, process optimization and sustainable engineering.
+Aspiring Process Engineer with research and industrial experience.
 </p>
 
 <div class="buttons">
-
-https://github.com/LilArtNast
-GitHub
-</a>
-
-<a
-class="btn secondary"
-href="https://linkedin.com/in/artur-nastasovici-60a724251"
-target="_blank">
-LinkedIn
-</a>
-
+<a href="https://github.com/LilArtNast" class="btn btn-primary" target="_blank">GitHub</a>
+<a href="https://linkedin.com/in/artur-nastasovici-60a724251" class="btn btn-secondary" target="_blank">LinkedIn</a>
 </div>
 
 </div>
@@ -289,7 +291,7 @@ LinkedIn
 
 <div class="stat">
 <h2>2</h2>
-<p>Scientific Publication</p>
+<p>Scientific Publications</p>
 </div>
 
 <div class="stat">
@@ -310,14 +312,17 @@ LinkedIn
 
 <h2 class="section-title">About Me</h2>
 
-<p style="max-width:900px;color:#cbd5e1;font-size:1.1rem;">
-I am a Chemical Engineering and Biotechnology student at Aalborg University.
-My background includes laboratory research, process optimization,
-analytical chemistry, biotechnology, data analysis, and industrial teamwork.
-I have worked in both scientific research environments and fast-paced
-commercial operations, developing strong leadership, communication,
-and problem-solving skills.
+<div class="card">
+<p>
+I am currently studying Chemical Engineering and Biotechnology at Aalborg University.
+My background includes laboratory research, analytical chemistry, microbiology,
+reaction kinetics, process optimization and data analysis.
+
+I have gained experience both in academic research environments and
+high-performance commercial operations, developing strong leadership,
+teamwork and problem-solving abilities.
 </p>
+</div>
 
 </section>
 
@@ -328,34 +333,23 @@ and problem-solving skills.
 <div class="timeline">
 
 <div class="timeline-item">
-
 <h3>🍕 Pizza Chef | Mamma's</h3>
-
 <p><strong>2024 – Present</strong></p>
-
 <p>
-Lead kitchen operations during peak service periods,
-coordinating a team of up to six people and managing
-high-volume production while maintaining quality and food safety standards.
+Leading kitchen operations, supervising team members and maintaining
+high standards of quality and efficiency during peak service periods.
 </p>
-
 </div>
 
 <div class="timeline-item">
-
 <h3>🔬 Laboratory Technician & Research Coordinator</h3>
-
-<p><strong>University of Melbourne (Bio21 Institute)</strong></p>
-
+<p><strong>University of Melbourne Bio21 Institute</strong></p>
 <p><strong>2023 – 2024</strong></p>
-
 <p>
-Coordinated multidisciplinary research activities,
-maintained laboratory quality standards,
-performed enzymatic experiments,
-and contributed to research resulting in a peer-reviewed publication.
+Worked on enzyme kinetics, microbiology experiments,
+laboratory quality assurance and research coordination,
+contributing to peer-reviewed scientific publications.
 </p>
-
 </div>
 
 </div>
@@ -364,228 +358,29 @@ and contributed to research resulting in a peer-reviewed publication.
 
 <section id="projects" class="container">
 
-<h2 class="section-title">Research & Projects</h2>
+<h2 class="section-title">Research Projects</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>🛢 Petroleum Refinery Research</h3>
-<p>
-Investigation of formaldehyde releasers,
-fouling mechanisms, ammonium chemistry,
-Raman spectroscopy and reaction kinetics.
-</p>
+<h3>🛢 Petroleum Refining</h3>
+<p>Formaldehyde chemistry, fouling mechanisms, ammonium salts and reaction kinetics.</p>
 </div>
 
 <div class="card">
 <h3>🦠 Sulfur-Dependent Bacteria</h3>
-<p>
-DNA extraction, growth monitoring,
-enzyme optimization and sulfur metabolism research.
-</p>
+<p>DNA extraction, enzyme optimization and sulfur metabolism studies.</p>
 </div>
 
 <div class="card">
-<h3>⚙ Gravity-Based Pumping</h3>
-<p>
-CellProfiler image analysis,
-statistical modelling in R,
-and process optimization.
-</p>
+<h3>⚙ Process Optimization</h3>
+<p>Statistical modelling, CellProfiler image analysis and operational improvement.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="container">
-
-<h2 class="section-title">Education</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h3>🎓 Aalborg University</h3>
-<p>BSc Chemical Engineering & Biotechnology</p>
-<p>2024 – 2027</p>
-</div>
-
-<div class="timeline-item">
-<h3>🧪 Business Academy Aarhus</h3>
-<p>AP Degree in Chemical & Biotechnical Science</p>
-<p>2021 – 2024</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="references" class="container">
-
-<h2 class="section-title">References & Recommendations</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>🔬 Dr Laura Burchill</h3>
-
-<p>
-Elizabeth Vernon Puzey Fellow
-<br>
-University of Melbourne – Bio21 Institute
-</p>
-
-<br>
-
-<p>
-"Artur has been an outstanding intern with exceptional analytical skills,
-intellectual curiosity, and dedication. He demonstrated strong competence
-in enzyme kinetics, experimental design, data analysis, microbiology,
-and optimization of biochemical assays."
-</p>
-
-<br>
-
-<p>
-Key strengths highlighted:
-</p>
-
-<ul>
-<li>Enzyme kinetics expertise</li>
-<li>Experimental design & execution</li>
-<li>Data analysis and interpretation</li>
-<li>Microbiology techniques</li>
-<li>Teamwork & communication</li>
-<li>Publication contributions</li>
-</ul>
-
-<br>
-
-references/Educational paper_ Letter_ArturNastasovici 2.pdf
-📄 View Reference Letter
-</a>
-
-
-</div>
-
-<div class="card">
-
-<h3>🧪 Professor Spencer J. Williams</h3>
-
-<p>
-School of Chemistry & Bio21 Institute
-<br>
-University of Melbourne
-</p>
-
-<br>
-
-<p>
-"Artur is a motivated and promising young scientist who developed
-excellent practical skills in microbiology and biochemistry while
-demonstrating reliability, enthusiasm, and a strong desire to produce
-high-quality scientific data."
-</p>
-
-<br>
-
-<p>
-Key strengths highlighted:
-</p>
-
-<ul>
-<li>Microbiology & sterile techniques</li>
-<li>UV-Vis spectroscopy</li>
-<li>Biochemical assays</li>
-<li>Laboratory safety & maintenance</li>
-<li>Team collaboration</li>
-<li>Reliability & professionalism</li>
-</ul>
-
-<br>
-
-references/Educational paper_ Letter_ArturNatasovici Spencer.pdf
-📄 View Reference Letter
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-  
-<section class="container">
-
-<h2 class="section-title">Personal Skills</h2>
-
-<div class="skills">
-
-<div class="skill">Leadership</div>
-
-<div class="skill">Teamwork</div>
-
-<div class="skill">Problem Solving</div>
-
-<div class="skill">Adaptability</div>
-
-<div class="skill">Time Management</div>
-
-<div class="skill">Critical Thinking</div>
-
-<div class="skill">Attention to Detail</div>
-
-<div class="skill">Communication</div>
-
-<div class="skill">Responsibility</div>
-
-<div class="skill">Decision Making</div>
-
-<div class="skill">Work Ethic</div>
-
-<div class="skill">Continuous Learning</div>
-
-</div>
-
-</section>
-
-  <section class="container">
-
-<h2 class="section-title">Professional Skills</h2>
-
-<div class="skills">
-
-<div class="skill">Process Optimization</div>
-
-<div class="skill">Data Analysis & Visualization</div>
-
-<div class="skill">Research Coordination</div>
-
-<div class="skill">Project Management</div>
-
-<div class="skill">Quality Assurance</div>
-
-<div class="skill">Laboratory Operations</div>
-
-<div class="skill">Statistical Analysis</div>
-
-<div class="skill">Cross-Functional Collaboration</div>
-
-<div class="skill">Excel & Workflow Automation</div>
-
-<div class="skill">Scientific Communication</div>
-
-<div class="skill">Technical Reporting</div>
-
-<div class="skill">Stakeholder Management</div>
-
-</div>
-
-</section>
-
-  
 <section id="skills" class="container">
 
 <h2 class="section-title">Technical Skills</h2>
@@ -595,92 +390,73 @@ references/Educational paper_ Letter_ArturNatasovici Spencer.pdf
 <div class="skill">Python</div>
 <div class="skill">R Programming</div>
 <div class="skill">Aspen HYSYS</div>
-<div class="skill">CellProfiler</div>
 <div class="skill">Reaction Kinetics</div>
 <div class="skill">Raman Spectroscopy</div>
-<div class="skill">UV-VIS Spectroscopy</div>
 <div class="skill">IR Spectroscopy</div>
-<div class="skill">HPLC</div>
+<div class="skill">UV-Vis Spectroscopy</div>
 <div class="skill">Gas Chromatography</div>
+<div class="skill">HPLC</div>
 <div class="skill">PCR</div>
-<div class="skill">CRISPR-Cas</div>
 <div class="skill">Microbiology</div>
-<div class="skill">Microsoft Excel</div>
-<div class="skill">PowerPoint</div>
 <div class="skill">Data Analysis</div>
 
 </div>
 
 </section>
 
+<section class="container publication">
 
-  
-<section class="container">
-
-<h2 class="section-title">Publication</h2>
-
-<div class="card">
-
-<h3>📄 Scientific Publication</h3>
-
-<p>
-Published research in chemical sciences.
-</p>
-
-<br>
-
-<a
-href="https://doi.org/10.1039/D4SC05114A"
-target="_blank"
-style="color:#38bdf8;">
-View Publication →
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>📄 Scientific Publication</h3>
-
-<p>
-Published research in chemical sciences.
-</p>
-
-<br>
-
-<a href="https://doi.org/10.1021/jacs.6c10662"
-target="_blank"
-style="color:#38bdf8;">
-View Publication →
-</a>
-
-</div>
-
-
-  
-  
-</section>
-
-<section class="container">
-
-<h2 class="section-title">Research Interests</h2>
+<h2 class="section-title">Publications</h2>
 
 <div class="grid">
 
-<div class="card">🛢 Petroleum Refining</div>
-<div class="card">⚗ Reaction Kinetics</div>
-<div class="card">🧪 Analytical Chemistry</div>
-<div class="card">🦠 Biotechnology</div>
-<div class="card">♻ Sustainable Engineering</div>
-<div class="card">📊 Process Optimization</div>
+<div class="card">
+<h3>Publication 1</h3>
+<a href="https://doi.org/10.1039/D4SC05114A" target="_blank">
+View Publication →
+</a>
+</div>
+
+<div class="card">
+<h3>Publication 2</h3>
+<a href="https://doi.org/10.1021/jacs.6c10662" target="_blank">
+View Publication →
+</a>
+</div>
 
 </div>
 
 </section>
 
-<section id="sports" class="container">
+<section class="container references">
+
+<h2 class="section-title">References</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Dr Laura Burchill</h3>
+<p>University of Melbourne Bio21 Institute</p>
+<br>
+references/laura-burchill-reference.pdf
+📄 View Reference Letter
+</a>
+</div>
+
+<div class="card">
+<h3>Professor Spencer J. Williams</h3>
+<p>University of Melbourne</p>
+<br>
+references/spencer-williams-reference.pdf
+📄 View Reference Letter
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="hobbies" class="container">
 
 <h2 class="section-title">Beyond Engineering</h2>
 
@@ -688,77 +464,24 @@ View Publication →
 
 <div class="card">
 <h3>🏀 Basketball</h3>
-<p>
-Played National Division basketball in Moldova
-and later competed in Denmark's 2nd Division.
-</p>
+<p>National Division in Moldova and 2nd Division in Denmark.</p>
 </div>
 
 <div class="card">
 <h3>♟ Chess</h3>
 <p>
-Competitive chess player with a strong interest
-in strategic thinking and decision-making.
-</p>
-
-<p style="margin-top:15px;">
-<a
-href="https://ratings.fide.com/profile/13907182"
-target="_blank"
-style="color:#38bdf8;">
+Competitive chess player.<br><br>
+<a href="https://ratings.fide.com/profile/13907182" target="_blank">
 View FIDE Profile →
 </a>
-
-
-
+</p>
 </div>
 
 <div class="card">
 <h3>🌍 Travel</h3>
-<p>
-Passionate about exploring cultures,
-history, and international perspectives.
-</p>
+<p>Exploring new cultures and international perspectives.</p>
 </div>
 
 <div class="card">
 <h3>🍳 Cooking</h3>
-<p>
-Cooking combines creativity,
-precision, and continuous improvement,
-qualities shared with engineering.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact" class="container contact">
-
-<h2 class="section-title">Contact</h2>
-
-<p>Email: anasta24@student.aau.dk</p>
-
-<br>
-
-<p>
-https://github.com/LilArtNast
-GitHub
-</a>
-</p>
-
-<p>
-<a href="https://linkedin.com/in/artur-nastasovici-60a724251" target="_blank">
-LinkedIn
-</a>
-</p>
-
-</section>
-
-<footer>
-© 2026 Artur Nastasovici
-</footer>
-
-</body>
-</html>
+<p>Combining creativity, precision and continuous improvement
