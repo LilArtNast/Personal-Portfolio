@@ -4,218 +4,210 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Artur Nastasovici | Chemical Engineer & Researcher</title>
+<title>Artur Nastasovici | Portfolio</title>
 
-https://fonts.googleapis.com
-https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap
-
-<style>
-
-:root{
-    --bg:#0f172a;
-    --card:#1e293b;
-    --accent:#38bdf8;
-    --text:#f8fafc;
-    --secondary:#94a3b8;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter',sans-serif;
+<link rel="preconnect" href="https://fonts.gstatic.com
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheetng:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    background:var(--bg);
-    color:var(--text);
+background:#0f172a;
+color:white;
+line-height:1.6;
 }
 
 nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    background:rgba(15,23,42,.95);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+position:fixed;
+top:0;
+width:100%;
+background:rgba(15,23,42,.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid #334155;
 }
 
 .nav-container{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+max-width:1200px;
+margin:auto;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    font-weight:800;
-    color:var(--accent);
+font-size:1.4rem;
+font-weight:800;
+color:#38bdf8;
 }
 
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
 }
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:120px 20px;
-    background:
-    radial-gradient(circle at top right,#2563eb40,transparent),
-    radial-gradient(circle at bottom left,#06b6d440,transparent);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px;
+background:
+radial-gradient(circle at top right,#2563eb55,transparent),
+radial-gradient(circle at bottom left,#06b6d455,transparent);
+}
+
+.hero-content{
+max-width:900px;
 }
 
 .hero h1{
-    font-size:4rem;
-    margin-bottom:15px;
+font-size:4rem;
+margin-bottom:15px;
 }
 
 .hero p{
-    color:var(--secondary);
-    font-size:1.2rem;
-    max-width:700px;
-    margin:auto;
+color:#cbd5e1;
+font-size:1.2rem;
 }
 
 .buttons{
-    margin-top:30px;
+margin-top:30px;
 }
 
 .btn{
-    display:inline-block;
-    padding:14px 28px;
-    margin:5px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
+display:inline-block;
+padding:14px 28px;
+border-radius:10px;
+text-decoration:none;
+margin:5px;
+font-weight:600;
 }
 
 .primary{
-    background:var(--accent);
-    color:black;
+background:#38bdf8;
+color:black;
 }
 
-.secondary-btn{
-    border:1px solid var(--accent);
-    color:var(--accent);
+.secondary{
+border:1px solid #38bdf8;
+color:#38bdf8;
 }
 
 .container{
-    max-width:1200px;
-    margin:auto;
-    padding:80px 20px;
+max-width:1200px;
+margin:auto;
+padding:90px 20px;
 }
 
 .section-title{
-    font-size:2.2rem;
-    margin-bottom:40px;
-    color:var(--accent);
+font-size:2.3rem;
+margin-bottom:40px;
+color:#38bdf8;
 }
 
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.stat-card{
-    background:var(--card);
-    padding:30px;
-    border-radius:12px;
-    text-align:center;
-}
-
-.stat-card h3{
-    font-size:2rem;
-    color:var(--accent);
-}
-
-.skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
-}
-
-.skill{
-    background:var(--card);
-    padding:20px;
-    border-radius:10px;
-}
-
-.bar{
-    height:10px;
-    background:#334155;
-    border-radius:20px;
-    margin-top:10px;
-}
-
-.fill{
-    height:10px;
-    border-radius:20px;
-    background:linear-gradient(90deg,#06b6d4,#3b82f6);
-}
-
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
 .card{
-    background:var(--card);
-    padding:25px;
-    border-radius:15px;
-    transition:.3s;
+background:#1e293b;
+padding:25px;
+border-radius:18px;
+border:1px solid #334155;
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#38bdf8;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+.stat h2{
+font-size:2rem;
+color:#38bdf8;
 }
 
 .timeline{
-    border-left:3px solid var(--accent);
-    padding-left:30px;
+border-left:3px solid #38bdf8;
+padding-left:25px;
 }
 
 .timeline-item{
-    margin-bottom:30px;
+margin-bottom:40px;
+}
+
+.timeline-item h3{
+color:#38bdf8;
+margin-bottom:5px;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.skill{
+background:#1e293b;
+padding:15px;
+border-radius:10px;
+text-align:center;
+border:1px solid #334155;
 }
 
 .contact{
-    text-align:center;
+text-align:center;
 }
 
 .contact a{
-    color:var(--accent);
-    text-decoration:none;
+color:#38bdf8;
+text-decoration:none;
 }
 
 footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid #334155;
-    color:var(--secondary);
+padding:30px;
+text-align:center;
+border-top:1px solid #334155;
+color:#94a3b8;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-    font-size:2.5rem;
+font-size:2.5rem;
 }
 
-.nav-links{
-    display:none;
+nav{
+display:none;
 }
 
 }
@@ -229,36 +221,36 @@ footer{
 <div class="nav-container">
 <div class="logo">AN</div>
 
-<div class="nav-links">
+<div>
 #aboutAbout</a>
-#skillsSkills</a>
-#projectsProjects</a>
-#educationEducation</a>
-#contactContact</a>
-</div>
-</div>
+#experienceExperience</a>
+<a href="#rojects</a>
+<a hrefSkills</a>
+<a hrefSports</a>
+<a href="#contact">Contact<//div>
 </nav>
 
 <section class="hero">
 
-<div>
+<div class="hero-content">
 
 <h1>Artur Nastasovici</h1>
 
 <p>
-Chemical Engineering & Biotechnology Student,
-Researcher, and Future Process Engineer focused on
-Petroleum Refining, Biotechnology, Sustainability,
-and Industrial Process Optimization.
+Chemical Engineering & Biotechnology Student • Researcher • Future Process Engineer
+</p>
+
+<p style="margin-top:20px;">
+Passionate about petroleum refining, sustainable technologies,
+reaction kinetics, biotechnology, process optimization,
+and industrial problem solving.
 </p>
 
 <div class="buttons">
 
-https://github.com/LilArtNast
-GitHub
-</a>
-
-<a class="btn secondary-btn"
+<a class="btn primary"
+href="https://github.com/LilArtNast"
+target"
 href="https://linkedin.com/in/artur-nastasovici-60a724251"
 target="_blank">
 LinkedIn
@@ -276,24 +268,24 @@ LinkedIn
 
 <div class="stats">
 
-<div class="stat-card">
-<h3>3+</h3>
+<div class="stat">
+<h2>3+</h2>
 <p>Research Projects</p>
 </div>
 
-<div class="stat-card">
-<h3>1</h3>
+<div class="stat">
+<h2>1</h2>
 <p>Scientific Publication</p>
 </div>
 
-<div class="stat-card">
-<h3>10+</h3>
-<p>Laboratory Techniques</p>
+<div class="stat">
+<h2>2</h2>
+<p>Countries of Professional Experience</p>
 </div>
 
-<div class="stat-card">
-<h3>4</h3>
-<p>Languages</p>
+<div class="stat">
+<h2>4</h2>
+<p>Languages Spoken</p>
 </div>
 
 </div>
@@ -304,13 +296,113 @@ LinkedIn
 
 <h2 class="section-title">About Me</h2>
 
-<p style="max-width:900px;color:#cbd5e1;font-size:1.1rem;line-height:1.8;">
-I am currently studying Chemical Engineering and Biotechnology at
-Aalborg University. My experience spans laboratory research,
-analytical chemistry, microbiology, biotechnology, reaction kinetics,
-and process engineering. I am passionate about developing sustainable
-technologies and solving industrial challenges through science and engineering.
+<p style="max-width:900px;color:#cbd5e1;font-size:1.1rem;">
+I am a Chemical Engineering and Biotechnology student at Aalborg University.
+My background includes laboratory research, process optimization,
+analytical chemistry, biotechnology, data analysis, and industrial teamwork.
+I have worked in both scientific research environments and fast-paced
+commercial operations, developing strong leadership, communication,
+and problem-solving skills.
 </p>
+
+</section>
+
+<section id="experience" class="container">
+
+<h2 class="section-title">Professional Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>🍕 Pizza Chef | Mamma's</h3>
+
+<p><strong>2024 – Present</strong></p>
+
+<p>
+Lead kitchen operations during peak service periods,
+coordinating a team of up to six people and managing
+high-volume production while maintaining quality and food safety standards.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>🔬 Laboratory Technician & Research Coordinator</h3>
+
+<p><strong>University of Melbourne (Bio21 Institute)</strong></p>
+
+<p><strong>2023 – 2024</strong></p>
+
+<p>
+Coordinated multidisciplinary research activities,
+maintained laboratory quality standards,
+performed enzymatic experiments,
+and contributed to research resulting in a peer-reviewed publication.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="container">
+
+<h2 class="section-title">Research & Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🛢 Petroleum Refinery Research</h3>
+<p>
+Investigation of formaldehyde releasers,
+fouling mechanisms, ammonium chemistry,
+Raman spectroscopy and reaction kinetics.
+</p>
+</div>
+
+<div class="card">
+<h3>🦠 Sulfur-Dependent Bacteria</h3>
+<p>
+DNA extraction, growth monitoring,
+enzyme optimization and sulfur metabolism research.
+</p>
+</div>
+
+<div class="card">
+<h3>⚙ Gravity-Based Pumping</h3>
+<p>
+CellProfiler image analysis,
+statistical modelling in R,
+and process optimization.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Education</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>🎓 Aalborg University</h3>
+<p>BSc Chemical Engineering & Biotechnology</p>
+<p>2024 – 2027</p>
+</div>
+
+<div class="timeline-item">
+<h3>🧪 Business Academy Aarhus</h3>
+<p>AP Degree in Chemical & Biotechnical Science</p>
+<p>2021 – 2024</p>
+</div>
+
+</div>
 
 </section>
 
@@ -320,94 +412,22 @@ technologies and solving industrial challenges through science and engineering.
 
 <div class="skills">
 
-<div class="skill">
-Python
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
-
-<div class="skill">
-R Programming
-<div class="bar"><div class="fill" style="width:75%"></div></div>
-</div>
-
-<div class="skill">
-Spectroscopy
-<div class="bar"><div class="fill" style="width:95%"></div></div>
-</div>
-
-<div class="skill">
-Chromatography (GC/HPLC)
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-</div>
-
-<div class="skill">
-Microbiology
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-</div>
-
-<div class="skill">
-Aspen HYSYS
-<div class="bar"><div class="fill" style="width:60%"></div></div>
-</div>
-
-</div>
-
-</section>
-
-<section id="projects" class="container">
-
-<h2 class="section-title">Featured Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-<h3>🛢️ Petroleum Refinery Research</h3>
-<p>
-Investigation of formaldehyde releasers, ammonium chemistry,
-fouling mechanisms, Raman measurements and reaction kinetics.
-</p>
-</div>
-
-<div class="card">
-<h3>🦠 Sulfur-Dependent Bacteria</h3>
-<p>
-DNA extraction, growth curves, enzyme optimization,
-Fuchsin assay implementation and sulfur metabolism studies.
-</p>
-</div>
-
-<div class="card">
-<h3>⚙️ Fungal Suspension Pumping</h3>
-<p>
-Gravity-based pumping study using CellProfiler,
-statistical analysis and process optimization.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="education" class="container">
-
-<h2 class="section-title">Education & Experience</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h3>Aalborg University</h3>
-<p>BSc Chemical Engineering & Biotechnology (2024-2027)</p>
-</div>
-
-<div class="timeline-item">
-<h3>University of Melbourne</h3>
-<p>Laboratory Assistant / Technician (2023-2024)</p>
-</div>
-
-<div class="timeline-item">
-<h3>Business Academy Aarhus</h3>
-<p>AP Degree in Chemical & Biotechnical Science (2021-2024)</p>
-</div>
+<div class="skill">Python</div>
+<div class="skill">R Programming</div>
+<div class="skill">Aspen HYSYS</div>
+<div class="skill">CellProfiler</div>
+<div class="skill">Reaction Kinetics</div>
+<div class="skill">Raman Spectroscopy</div>
+<div class="skill">UV-VIS Spectroscopy</div>
+<div class="skill">IR Spectroscopy</div>
+<div class="skill">HPLC</div>
+<div class="skill">Gas Chromatography</div>
+<div class="skill">PCR</div>
+<div class="skill">CRISPR-Cas</div>
+<div class="skill">Microbiology</div>
+<div class="skill">Microsoft Excel</div>
+<div class="skill">PowerPoint</div>
+<div class="skill">Data Analysis</div>
 
 </div>
 
@@ -421,17 +441,81 @@ statistical analysis and process optimization.
 
 <h3>📄 Scientific Publication</h3>
 
-<p style="margin-top:10px;">
-Published research in the field of chemical sciences.
+<p>
+Published research in chemical sciences.
+</p>
+
+<br>
+
+<a href="https://doi.org/10.1039/D4SC05114A"
+target="_blank"
+style="color:#38bdf8;">
+View Publication →
+</a>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Research Interests</h2>
+
+<div class="grid">
+
+<div class="card">🛢 Petroleum Refining</div>
+<div class="card">⚗ Reaction Kinetics</div>
+<div class="card">🧪 Analytical Chemistry</div>
+<div class="card">🦠 Biotechnology</div>
+<div class="card">♻ Sustainable Engineering</div>
+<div class="card">📊 Process Optimization</div>
+
+</div>
+
+</section>
+
+<section id="sports" class="container">
+
+<h2 class="section-title">Beyond Engineering</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🏀 Basketball</h3>
+<p>
+Played National Division basketball in Moldova
+and later competed in Denmark's 2nd Division.
+</p>
+</div>
+
+<div class="card">
+<h3>♟ Chess</h3>
+<p>
+Competitive chess player with a strong interest
+in strategic thinking and decision making.
 </p>
 
 <p style="margin-top:15px;">
-<a style="color:#38bdf8;"
-href="https://doi.org/10.1039/D4SC05114A"
-target="_blank">
-View Publication →
+<a href="PUT_YOUR_FIDE_PROFILE_LINK_HERE"
+target="_blank"
+style="color:#38bdf8;">
+View FIDE Profile →
 </a>
+>
+<p>
+Passionate about exploring cultures,
+history and international perspectives.
 </p>
+</div>
+
+<div class="card">
+<h3>🍳 Cooking</h3>
+<p>
+Cooking combines creativity,
+precision and continuous improvement,
+qualities shared with engineering.
+</p>
+</div>
 
 </div>
 
@@ -443,24 +527,23 @@ View Publication →
 
 <p>Email: anasta24@student.aau.dk</p>
 
+<br>
+
 <p>
-GitHub:
-https://github.com/LilArtNast
-github.com/LilArtNast
+<a href="https://github.com/LilArtNb
 </a>
 </p>
 
 <p>
-LinkedIn:
-<a href="https://linkedin.com/in/artur-nastasovici-60a724251">
-linkedin.com/in/artur-nastasovici-60a724251
+<a href="https://linkedin.com/in/artur-nastasovici-60a724251" target="_blank">
+LinkedIn
 </a>
 </p>
 
 </section>
 
 <footer>
-© 2026 Artur Nastasovici | Chemical Engineering & Biotechnology
+© 2026 Artur Nastasovici
 </footer>
 
 </body>
